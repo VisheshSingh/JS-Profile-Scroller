@@ -5,7 +5,7 @@ const data = [
     gender: "Male",
     lookingFor: "Female",
     location: "Boston MA",
-    image: "https://randomuser.me/api/portraits/men/81/jpg"
+    image: "https://randomuser.me/api/portraits/men/81.jpg"
   },
   {
     name: "Sara Rodriguez",
@@ -13,7 +13,7 @@ const data = [
     gender: "Female",
     lookingFor: "Male",
     location: "New York NY",
-    image: "https://randomuser.me/api/portraits/women/81/jpg"
+    image: "https://randomuser.me/api/portraits/women/81.jpg"
   },
   {
     name: "Phobe Dakota",
@@ -21,7 +21,7 @@ const data = [
     gender: "Female",
     lookingFor: "Male",
     location: "Dallas TX",
-    image: "https://randomuser.me/api/portraits/women/82/jpg"
+    image: "https://randomuser.me/api/portraits/women/82.jpg"
   }
 ];
 
@@ -47,6 +47,10 @@ function nextProfile() {
           currentProfile.gender
         } looking for ${currentProfile.lookingFor}</li>     
     </ul>`;
+
+  document.getElementById("imageDisplay").innerHTML = `<img src="${
+    currentProfile.image
+  }">`;
 }
 
 // ITERATOR
